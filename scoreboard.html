@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Scoreboard</title>
+        <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+            margin-top: 50px;
+        }
+        table {
+            margin: 0 auto;
+            border-collapse: collapse;
+            width: 80%;
+        }
+        th, td {
+            border: 1px solid #aaa;
+            padding: 10px;
+        }
+        th {
+            background: #ddd;
+        }
+
+        th span {
+            font-size: 0.9em;
+            margin-left: 4px;
+        }
+    </style>
+    </head>
+    <body>
+        <h1>Scoreboard</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th onclick="sortTable('date')">Date <span id="arrow-date"></span></th>
+                    <th onclick="sortTable('difficulty')">Difficulty <span id="arrow-difficulty"></span></th>
+                    <th onclick="sortTable('attempts')">Attempts <span id="arrow-attempts"></span></th>
+                    <th onclick="sortTable('time')">Time <span id="arrow-time"></span></th>
+                </tr>
+            </thead>
+            <tbody id="scoreboardBody">
+                <!-- Scores will go here -->
+            </tbody>
+        </table>
+        
+        <div id="gameStats">
+            <h2>Game Stats</h2>
+            <p>Total Game Played: <span id="totalGames">0</span></p>
+            <p>Average Attemps: <span id="avgAttempts">0</span></p>
+            <p>Fastest Time: <span id="fastestTime">N/A</span></p>
+        </div>
+
+        <br>
+        <button onclick="clearScores()">Clear Scoreboard</button>
+        <button onclick="location.href='index.html'">Back to Game</button>
+        <br>
+        <button onclick="location.href = 'menu.html'">Main Menu</button>
+
+        <script src="scoreboard.js"></script>
+    </body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Guess The Number</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin-top: 50px;
+            text-align: center;
+        }   
+        input, button {
+            padding: 10px;
+            margin: 10px;
+            font-size: 16px;
+        }
+        .result {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+        #guessHistoryContainer {
+            margin-top: 1rem;
+        }
+        #guessHistory li {
+            margin-bottom: 5px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+    <body>
+        <h1>Guess The Number</h1>
+
+        <label for="difficulty">Select Difficulty:</label>
+        <br>
+        <label>
+            <input type="checkbox" id="enableTimer" onchange="toggleTimer()"> Enable Timer
+        </label>
+        <p id="timerDisplay" style="font-weight: bold;"></p>
+
+        <select name="difficulty" id="difficulty" onchange="setDifficulty()">
+            <option value="10">Easy (1-10)</option>
+            <option value="100">Medium (1-100)</option>
+            <option value="1000">Hard (1-1000)</option>
+        </select>
+        
+        <p id="rangeText">I'm thinking of a number between <strong>1 and 10</strong>. Can you guess it?</p>
+        <input type="number" id="guessInput" placeholder="Enter your guess">
+        <button onclick="checkGuest()">Guess</button>
+        <p class="result" id="resultText"></p>
+        <p id="attemptsText"></p>
+
+        <button onclick="resetGame()">Restart</button>
+        
+        <button onclick="location.href='scoreboard.html'">Scoreboard</button>
+        <br>
+        <button onclick="location.href = 'menu.html'">Main Menu</button>
+
+        <script src="script.js"></script>
+    </body>
+</html>
