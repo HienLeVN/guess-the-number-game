@@ -3,30 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Guess The Number</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            margin-top: 50px;
-            text-align: center;
-        }   
-        input, button {
-            padding: 10px;
-            margin: 10px;
-            font-size: 16px;
-        }
-        .result {
-            font-size: 20px;
-            margin-top: 20px;
-        }
-        #guessHistoryContainer {
-            margin-top: 1rem;
-        }
-        #guessHistory li {
-            margin-bottom: 5px;
-            font-family: monospace;
-        }
-    </style>
+    <link rel="stylesheet" href="gameStyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
     <body>
         <h1>Guess The Number</h1>
@@ -50,11 +28,12 @@
         <p class="result" id="resultText"></p>
         <p id="attemptsText"></p>
 
-        <button onclick="resetGame()">Restart</button>
+        <div class="navigation">
+            <button onclick="resetGame()">Restart</button>
+            <button onclick="location.href='scoreboard.html'">Scoreboard</button>
+            <button onclick="location.href = 'menu.html'">Main Menu</button>
+        </div>
         
-        <button onclick="location.href='scoreboard.html'">Scoreboard</button>
-        <br>
-        <button onclick="location.href = 'menu.html'">Main Menu</button>
 
         <script src="script.js"></script>
     </body>

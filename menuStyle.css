@@ -6,7 +6,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 h1 {
@@ -57,15 +57,4 @@ button:hover {
 }
 .modal-content ul {
     padding-left: 20px;
-}
-.close {
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    font-size: 24px;
-    cursor: pointer;
-    color: #888;
-}
-.close:hover {
-    color:black;
 }
