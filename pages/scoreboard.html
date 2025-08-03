@@ -3,31 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <title>Scoreboard</title>
-        <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #f0f0f0;
-            margin-top: 50px;
-        }
-        table {
-            margin: 0 auto;
-            border-collapse: collapse;
-            width: 80%;
-        }
-        th, td {
-            border: 1px solid #aaa;
-            padding: 10px;
-        }
-        th {
-            background: #ddd;
-        }
-
-        th span {
-            font-size: 0.9em;
-            margin-left: 4px;
-        }
-    </style>
+        <link rel="stylesheet" href="../styles/scoreboardStyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     </head>
     <body>
         <h1>Scoreboard</h1>
@@ -52,11 +29,12 @@
             <p>Fastest Time: <span id="fastestTime">N/A</span></p>
         </div>
 
-        <br>
-        <button onclick="clearScores()">Clear Scoreboard</button>
-        <button onclick="location.href='index.html'">Back to Game</button>
-        <br>
-        <button onclick="location.href = 'menu.html'">Main Menu</button>
+
+        <div class="navigation">
+            <button onclick="location.href = 'menu.html'">Main Menu</button>
+            <button onclick="clearScores()">Clear Scoreboard</button>
+            <button onclick="location.href='index.html'">Back to Game</button>
+        </div>
 
         <script src="../components/scoreboard.js"></script>
     </body>
